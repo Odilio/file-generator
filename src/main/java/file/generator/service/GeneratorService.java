@@ -30,7 +30,7 @@ public class GeneratorService {
 		texto.append(registroService.popularCAB("2015", "2016"));
 		texto.append(registro2Service.popularCAB("2015", "2016"));
 		
-		file = new File("nome do arquivo.txt");
+		file = new File("nome do arquivo.csv");
 		   
 		try {
 			FileUtils.writeStringToFile(file, texto.toString());
