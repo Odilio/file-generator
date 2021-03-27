@@ -1,5 +1,6 @@
 package file.generator.registro;
 
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -20,12 +21,12 @@ public class Registro2 extends ATipoRegistro {
 	@Override
 	public void MontarParametros() {
 		try {
-			Parametros = new String[4];
+			Parametros = new ArrayList<String>();
 			
-			Parametros[0] = ConversorACFiscal.IntParaString(VersaoLeiaute, 2);
-			Parametros[1] = SistemaOrigem;
-			Parametros[2] = DataGeracao;
-			Parametros[3] = ConversorACFiscal.StringParaString(Empresa,10);
+			Parametros.add(ConversorACFiscal.IntParaString(VersaoLeiaute, 2));
+			Parametros.add(SistemaOrigem);
+			Parametros.add(DataGeracao);
+			Parametros.add(ConversorACFiscal.StringParaString(Empresa,10));
 			
 		} catch (Exception e) {
 			Logger.getLogger(this.getClass().getName()).log(Level.INFO, "Exception", e);

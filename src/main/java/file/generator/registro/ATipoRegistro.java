@@ -1,5 +1,7 @@
 package file.generator.registro;
 
+import java.util.List;
+
 public abstract class ATipoRegistro {
 	//--------------------------------------------------------------------------------
 	// Constantes
@@ -16,7 +18,7 @@ public abstract class ATipoRegistro {
 	/**
 	 * Parâmetros que serão impressos.
 	 */
-	protected String Parametros[];
+	protected List<String> Parametros;
 
 	//--------------------------------------------------------------------------------
 	// Metodos
